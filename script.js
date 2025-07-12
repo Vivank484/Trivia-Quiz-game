@@ -137,3 +137,10 @@ function goToStart() {
   score = 0;
   currentQuestion = 0;
 }
+
+function clearLeaderboard() {
+  if (confirm("Are you sure you want to clear the leaderboard?")) {
+    localStorage.removeItem("leaderboard");
+    displayLeaderboard();
+  }
+}
